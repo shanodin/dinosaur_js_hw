@@ -11,19 +11,9 @@ Park.prototype.removeDinosaur = function (dinosaur) {
   this.enclosure.splice(index, 1);
 };
 
-// Park.prototype.removeAllOfType = function (dinoType) {
-//   for (var dino of this.enclosure) {
-//     if (dino.type === dinoType) {
-//       var index = this.enclosure.indexOf(dino);
-//       this.enclosure.splice(index, 1);
-//     };
-//   };
-// };
-
 Park.prototype.removeAllOfType = function (dinoType) {
-  var index = dinoType;
   for (var i = this.enclosure.length -1; i >= 0; i--) {
-    if (this.enclosure[i].type === index) {
+    if (this.enclosure[i].type === dinoType) {
       this.enclosure.splice(i, 1);
     };
   };
